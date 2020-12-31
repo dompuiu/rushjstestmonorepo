@@ -1,0 +1,39 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "(js-data-structures) Jest watch current file",
+      "env": {
+        "DEBUG_PRINT_LIMIT": "100000"
+      },
+      "request": "launch",
+      "runtimeExecutable": "/usr/bin/pnpm",
+      "cwd": "${workspaceFolder}/libs/js-data-structures",
+      "runtimeArgs": [
+        "run-script",
+        "test:watch",
+        "--",
+        "--runInBand",
+        "${fileDirname}/${fileBasename}"
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "skipFiles": ["<node_internals>/**"],
+      "type": "pwa-node"
+    },
+    {
+      "name": "(js-data-structures) Jest watch all tests",
+      "request": "launch",
+      "runtimeArgs": ["run-script", "test:watch"],
+      "runtimeExecutable": "/usr/bin/pnpm",
+      "cwd": "${workspaceFolder}/libs/js-data-structures",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "skipFiles": ["<node_internals>/**"],
+      "type": "pwa-node"
+    }
+  ]
+}
